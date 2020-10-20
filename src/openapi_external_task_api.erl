@@ -1,23 +1,22 @@
 -module(openapi_external_task_api).
 
--compile(export_all).
-%-export([complete_external_task_resource/3, complete_external_task_resource/4,
-%         extend_lock/3, extend_lock/4,
-%         fetch_and_lock/2, fetch_and_lock/3,
-%         get_external_task/2, get_external_task/3,
-%         get_external_task_error_details/2, get_external_task_error_details/3,
-%         get_external_tasks/1, get_external_tasks/2,
-%         get_external_tasks_count/1, get_external_tasks_count/2,
-%         get_topic_names/1, get_topic_names/2,
-%         handle_external_task_bpmn_error/3, handle_external_task_bpmn_error/4,
-%         handle_failure/3, handle_failure/4,
-%         query_external_tasks/2, query_external_tasks/3,
-%         query_external_tasks_count/2, query_external_tasks_count/3,
-%         set_external_task_resource_priority/3, set_external_task_resource_priority/4,
-%         set_external_task_resource_retries/3, set_external_task_resource_retries/4,
-%         set_external_task_retries/2, set_external_task_retries/3,
-%         set_external_task_retries_async_operation/2, set_external_task_retries_async_operation/3,
-%         unlock/2, unlock/3]).
+-export([complete_external_task_resource/3, complete_external_task_resource/2,
+        extend_lock/3, extend_lock/2,
+        fetch_and_lock/2, fetch_and_lock/1,
+        get_external_task/2, get_external_task/3,
+        get_external_task_error_details/2, get_external_task_error_details/3,
+        get_external_tasks/1, get_external_tasks/2,
+        get_external_tasks_count/1, get_external_tasks_count/2,
+        get_topic_names/1, get_topic_names/2,
+        handle_external_task_bpmn_error/3, handle_external_task_bpmn_error/2,
+        handle_failure/3, handle_failure/2,
+        query_external_tasks/2, query_external_tasks/1,
+        query_external_tasks_count/2, query_external_tasks_count/1,
+        set_external_task_resource_priority/3, set_external_task_resource_priority/2,
+        set_external_task_resource_retries/3, set_external_task_resource_retries/2,
+        set_external_task_retries/2, set_external_task_retries/1,
+        set_external_task_retries_async_operation/2, set_external_task_retries_async_operation/1,
+        unlock/2, unlock/3]).
 
 -define(BASE_URL, "/engine-rest").
 
