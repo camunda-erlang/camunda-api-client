@@ -1,1 +1,18 @@
+{application, openapi,
+ [{description, "OpenApi Spec for Camunda BPM REST API."},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+    [kernel,
+     stdlib,
+     ssl,
+     hackney,
+     ctx
+    ]},
+  {env, [{host, "localhost"}]},
+  {modules, []},
 
+  {maintainers, []},
+  {licenses, ["Apache License 2.0"]},
+  {links, []}
+]}.
