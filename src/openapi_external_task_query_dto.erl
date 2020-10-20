@@ -1,0 +1,77 @@
+-module(openapi_external_task_query_dto).
+
+-export([encode/1]).
+
+-export_type([openapi_external_task_query_dto/0]).
+
+-type openapi_external_task_query_dto() ::
+    #{ 'externalTaskId' => binary(),
+       'externalTaskIdIn' => list(),
+       'topicName' => binary(),
+       'workerId' => binary(),
+       'locked' => boolean(),
+       'notLocked' => boolean(),
+       'withRetriesLeft' => boolean(),
+       'noRetriesLeft' => boolean(),
+       'lockExpirationAfter' => openapi_date_time:openapi_date_time(),
+       'lockExpirationBefore' => openapi_date_time:openapi_date_time(),
+       'activityId' => binary(),
+       'activityIdIn' => list(),
+       'executionId' => binary(),
+       'processInstanceId' => binary(),
+       'processInstanceIdIn' => list(),
+       'processDefinitionId' => binary(),
+       'tenantIdIn' => list(),
+       'active' => boolean(),
+       'suspended' => boolean(),
+       'priorityHigherThanOrEquals' => integer(),
+       'priorityLowerThanOrEquals' => integer(),
+       'sorting' => list()
+     }.
+
+encode(#{ 'externalTaskId' := ExternalTaskId,
+          'externalTaskIdIn' := ExternalTaskIdIn,
+          'topicName' := TopicName,
+          'workerId' := WorkerId,
+          'locked' := Locked,
+          'notLocked' := NotLocked,
+          'withRetriesLeft' := WithRetriesLeft,
+          'noRetriesLeft' := NoRetriesLeft,
+          'lockExpirationAfter' := LockExpirationAfter,
+          'lockExpirationBefore' := LockExpirationBefore,
+          'activityId' := ActivityId,
+          'activityIdIn' := ActivityIdIn,
+          'executionId' := ExecutionId,
+          'processInstanceId' := ProcessInstanceId,
+          'processInstanceIdIn' := ProcessInstanceIdIn,
+          'processDefinitionId' := ProcessDefinitionId,
+          'tenantIdIn' := TenantIdIn,
+          'active' := Active,
+          'suspended' := Suspended,
+          'priorityHigherThanOrEquals' := PriorityHigherThanOrEquals,
+          'priorityLowerThanOrEquals' := PriorityLowerThanOrEquals,
+          'sorting' := Sorting
+        }) ->
+    #{ 'externalTaskId' => ExternalTaskId,
+       'externalTaskIdIn' => ExternalTaskIdIn,
+       'topicName' => TopicName,
+       'workerId' => WorkerId,
+       'locked' => Locked,
+       'notLocked' => NotLocked,
+       'withRetriesLeft' => WithRetriesLeft,
+       'noRetriesLeft' => NoRetriesLeft,
+       'lockExpirationAfter' => LockExpirationAfter,
+       'lockExpirationBefore' => LockExpirationBefore,
+       'activityId' => ActivityId,
+       'activityIdIn' => ActivityIdIn,
+       'executionId' => ExecutionId,
+       'processInstanceId' => ProcessInstanceId,
+       'processInstanceIdIn' => ProcessInstanceIdIn,
+       'processDefinitionId' => ProcessDefinitionId,
+       'tenantIdIn' => TenantIdIn,
+       'active' => Active,
+       'suspended' => Suspended,
+       'priorityHigherThanOrEquals' => PriorityHigherThanOrEquals,
+       'priorityLowerThanOrEquals' => PriorityLowerThanOrEquals,
+       'sorting' => Sorting
+     }.
